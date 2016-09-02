@@ -20,7 +20,7 @@ end
 
 class BelongsToOptions < AssocOptions
   def initialize(name, options = {})
-    # ...
+    
   end
 end
 

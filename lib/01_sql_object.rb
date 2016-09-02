@@ -73,7 +73,7 @@ class SQLObject
       name_set = "#{attr_name}=".to_sym
       name_sym = attr_name.to_sym
       if self.class.columns.include?(attr_name)
-        self.send(name_set, value)
+        send(name_set, value)
       else
         raise "unknown attribute '#{attr_name}'"
       end
@@ -89,7 +89,7 @@ class SQLObject
   end
 
   def insert
-    columns = self.class.columns
+    columns = self.class.columns.drop(1)
     col_names = columns.map(&:to_s)
     cols = cols.join(", ")
     question_marks = (["?"] * cols.length).join(", ")
