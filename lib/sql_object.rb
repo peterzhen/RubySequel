@@ -21,7 +21,7 @@ class SQLObject
   end
 
   def self.finalize!
-    columns.each do |name|
+    self.columns.each do |name|
       define_method("#{name}") do
         self.attributes[name]
       end
@@ -120,10 +120,6 @@ class SQLObject
   end
 
   def save
-    if id.nil?
-      insert
-    else
-      update
-    end
+    id.nil? ? insert : update
   end
 end
