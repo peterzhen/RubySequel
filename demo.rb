@@ -1,6 +1,13 @@
 require_relative 'rubysequel'
 
-DBConnection::reset
+DEMO_DB_FILE = 'pokemon.db'
+DEMO_SQL_FILE = 'pokemon.sql'
+
+
+`rm '#{DEMO_DB_FILE}'`
+`cat '#{DEMO_SQL_FILE}' | sqlite3 '#{DEMO_DB_FILE}'`
+
+DBConnection.open(DEMO_DB_FILE)
 
 class Town < SQLObject
   self.table_name = "towns"
@@ -36,6 +43,3 @@ class Pokemon < SQLObject
 
   finalize!
 end
-
-pokemon = Pokemon.all
-puts pokemon
