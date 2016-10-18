@@ -1,5 +1,4 @@
-require 'require_all'
-require_all 'lib'
+require_relative 'rubysequel'
 
 DEMO_DB_FILE = 'pokemon.db'
 DEMO_SQL_FILE = 'pokemon.sql'

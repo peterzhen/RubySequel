@@ -22,7 +22,7 @@ RubySequel uses:
 * `belongs_to(name, options)`
 * `has_one_through(name, through_name, source_name)`
 
-## Usage
+## Demo
 
 RubySequel takes in a SQLite3 database which is done through `DBConnection`.  By default the gem has been preset with a demo database and it's variables are pre-filled.  RubeSequel's methods and associations can be seen by loading `demo.rb` in pry.  This can be done by entering `load './demo.rb'` into the pry console.
 
@@ -44,3 +44,7 @@ However in RubySequel you can simply do this:
 ## Custom Databse
 
 To load a custom database, simply change the `DEMO_DB_FILE` to your `.db` file and `DEMO_SQL_FILE` to your `.sql` file in `demo.rb`.  
+
+## Adding RubySequel To Your Project
+
+In order to use RubySequel in your project you need to `require 'rubysequel'` and then extend `SQLObject` in your model class.
