@@ -17,7 +17,7 @@ class DBConnection
   def self.reset
     commands = [
       "rm '#{POKEMON_DB_FILE}'",
-      "pokemon '#{POKEMON_SQL_FILE}' | sqlite3 '#{POKEMON_DB_FILE}'"
+      "cat '#{POKEMON_SQL_FILE}' | sqlite3 '#{POKEMON_DB_FILE}'"
     ]
 
     commands.each { |command| `#{command}` }

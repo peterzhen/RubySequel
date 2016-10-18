@@ -1,25 +1,27 @@
-require_relative 'rubysequel'
+require 'require_all'
+require_all 'lib'
 
 DEMO_DB_FILE = 'pokemon.db'
 DEMO_SQL_FILE = 'pokemon.sql'
 
 
 `rm '#{DEMO_DB_FILE}'`
-`pokemon '#{DEMO_SQL_FILE}' | sqlite3 '#{DEMO_DB_FILE}'`
+`cat '#{DEMO_SQL_FILE}' | sqlite3 '#{DEMO_DB_FILE}'`
 
 DBConnection.open(DEMO_DB_FILE)
 
-class Town < SQLObject
-  self.table_name = "towns"
-  has_many :trainers,
-  class_name: 'Trainer',
-  foreign_key: :town_id
+class Pokemon < SQLObject
+  belongs_to :trainer,
+  class_name: "Trainer",
+  primary_key: :id,
+  foreign_key: :trainer_id
+
+  has_one_through :town, :trainer, :town
 
   finalize!
 end
 
 class Trainer < SQLObject
-  self.table_name = "trainers"
   has_many :pokemons,
   class_name: "Pokemon",
   foreign_key: :trainer_id
@@ -31,15 +33,11 @@ class Trainer < SQLObject
   finalize!
 end
 
-
-class Pokemon < SQLObject
-  self.table_name = "pokemons"
-  belongs_to :trainer,
-  class_name: 'Trainer',
-  primary_key: :id,
-  foreign_key: :trainer_id
-
-  has_one_through :town, :trainer, :town
+class Town < SQLObject
+  has_many :trainers,
+  class_name: "Trainer",
+  foreign_key: :town_id,
+  primary_key: :id
 
   finalize!
 end

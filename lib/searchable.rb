@@ -17,7 +17,3 @@ module Searchable
     results
   end
 end
-
-class SQLObject
-  extend Searchable
-end
