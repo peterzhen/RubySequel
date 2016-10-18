@@ -1,5 +1,5 @@
 # RubySequel
-A lightweight ORM library inspired by Ruby on Rails' Active Record.  RubySequel performs SQLite3 with methods through Object Oriented objects rather than SQL queries.  This provides a quicker and more simplified way for the database to be accessed.
+RubySequel is a lightweight ORM library.  RubySequel performs SQLite3 with methods through Object Oriented objects by translating SQL queries.  This provides for a quicker, more simplified way for the database to be accessed.
 
 ##Libraries
 
@@ -9,12 +9,12 @@ RubySequel uses:
 
 ##Methods
 
-* `::all`
-* `::find(id)`
-* `::where(params)`
-* `::insert`
-* `#update`
-* `#save`
+* `::all` - returns all rows from the SQLObject.
+* `::find(id)` - returns the rows from the SQLObject that matches the `id` parameter
+* `::where(params)` - returns all rows from the SQLObject that matches `params`, which takes in a key value hash.
+* `::insert` - creates a new row and inserts it into the database.
+* `#update` - updates the attributes for the current SQLObject.
+* `#save` - inserts a SQLObject.
 
 ## Associations
 
