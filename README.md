@@ -24,26 +24,26 @@ RubySequel uses:
 
 ## Demo
 
-RubySequel takes in a SQLite3 database which is done through `DBConnection`.  By default the gem has been preset with a demo database and it's variables are pre-filled.  RubeSequel's methods and associations can be seen by loading `demo.rb` in pry.  This can be done by entering `load './demo.rb'` into the pry console.
+A demo database has been included in the RubySequel's root to showcase the general functionality.  RubeSequel's methods and associations can be seen by loading `demo.rb` in pry.  This can be done by entering `load './demo.rb'` into the pry console.
 
-To test the methods or associations simply type use on of the listed methods or associations.  For example:
+To test the methods or associations, simply use one of the listed methods or associations.
 
-If you wanted to find get all from the `pokemons` table, in `SQL` you would write:
+For example, if you wanted to find get all from the `pokemons` table, in `SQL` you would write:
 
 ```
 SELECT
-*
+  *
 FROM
-pokemons;
+  pokemons;
 ```
 
-However in RubySequel you can simply do this:
+However in RubySequel you can just do this:
 
 `Pokemon.all`
 
 ## Custom Databse
 
-To load a custom database, simply change the `DEMO_DB_FILE` to your `.db` file and `DEMO_SQL_FILE` to your `.sql` file in `demo.rb`.  
+To load a custom database, change the `DEMO_DB_FILE` to match your `.db` file and `DEMO_SQL_FILE` to your `.sql` file in `demo.rb`.  
 
 ## Adding RubySequel To Your Project
 
