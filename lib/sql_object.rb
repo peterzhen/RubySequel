@@ -10,16 +10,12 @@ class SQLObject
         #{table_name}
     SQL
 
-    table_names = []
-    @table.first.each do |name, value|
-      table_names << name.to_sym
-    end
-    table_names
+    @table.first.map!(&:to_sym)
   end
 
   def self.finalize!
     self.columns.each do |name|
-      define_method("#{name}") do
+      define_method(name) do
         self.attributes[name]
       end
 
@@ -67,10 +63,9 @@ class SQLObject
 
   def initialize(params = {})
     params.each do |attr_name, value|
-      name_set = "#{attr_name}=".to_sym
-      name_sym = attr_name.to_sym
+      attr_name = attr_name.to_sym
       if self.class.columns.include?(attr_name)
-        send(name_set, value)
+        self.send("#{attr_name}=", value)
       else
         raise "unknown attribute '#{attr_name}'"
       end
