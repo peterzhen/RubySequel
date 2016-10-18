@@ -9,7 +9,7 @@ RubySequel uses:
 
 ##Methods
 
-* `::all` - returns all SQLObjects from the specific table
+* `::all`
 * `::find(id)`
 * `::where(params)`
 * `::insert`
@@ -29,6 +29,7 @@ RubySequel takes in a SQLite3 database which is done through `DBConnection`.  By
 To test the methods or associations simply type use on of the listed methods or associations.  For example:
 
 If you wanted to find get all from the `pokemons` table, in `SQL` you would write:
+
 ```
 SELECT
 *
