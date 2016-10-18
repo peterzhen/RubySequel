@@ -9,7 +9,7 @@ RubySequel uses:
 
 ##Methods
 
-* `::all`
+* `::all` - returns all SQLObjects from the specific table
 * `::find(id)`
 * `::where(params)`
 * `::insert`

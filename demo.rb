@@ -5,7 +5,7 @@ DEMO_SQL_FILE = 'pokemon.sql'
 
 
 `rm '#{DEMO_DB_FILE}'`
-`cat '#{DEMO_SQL_FILE}' | sqlite3 '#{DEMO_DB_FILE}'`
+`pokemon '#{DEMO_SQL_FILE}' | sqlite3 '#{DEMO_DB_FILE}'`
 
 DBConnection.open(DEMO_DB_FILE)
 
