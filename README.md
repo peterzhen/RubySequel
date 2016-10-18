@@ -47,4 +47,4 @@ To load a custom database, simply change the `DEMO_DB_FILE` to your `.db` file a
 
 ## Adding RubySequel To Your Project
 
-In order to use RubySequel in your project you need to `require 'rubysequel'` and then extend `SQLObject` in your model class.
+In order to use RubySequel in your project you need to `require_relative` for `rubysequel.rb` and then extend `SQLObject` in your model class.
