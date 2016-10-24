@@ -24,7 +24,7 @@ RubySequel uses:
 
 ## Demo
 
-A demo database has been included in the RubySequel's root to showcase the general functionality.  RubeSequel's methods and associations can be seen by loading `demo.rb` in pry.  This can be done by entering `load './demo.rb'` into the pry console.
+A demo database has been included in the RubySequel's root to showcase the general functionality.  RubeSequel's methods and associations can be seen by loading `demo.rb` in pry.  First, do a bundle install in the directory.  Then the demo can be loaded by entering `load './demo.rb'` into the pry console.
 
 To test the methods or associations, simply use one of the listed methods or associations.
 
