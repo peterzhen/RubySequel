@@ -24,11 +24,17 @@ RubySequel uses:
 
 ## Demo
 
-A demo database has been included in the RubySequel's root to showcase the general functionality.  RubeSequel's methods and associations can be seen by loading `demo.rb` in pry.  First, do a bundle install in the directory.  Then the demo can be loaded by entering `load './demo.rb'` into the pry console.
+A demo database has been included in the RubySequel's root to showcase the general functionality.  
+
+To try out RubySequel:
+* Clone or download the zip from the github repo
+* Run a bundle install in the directory (This requires Ruby)
+* Open pry into the console by simple typing in `pry`
+* Then the demo can be loaded by entering `load './demo.rb'` into the pry console.
 
 To test the methods or associations, simply use one of the listed methods or associations.
 
-For example, if you wanted to find get all from the `pokemons` table, in `SQL` you would write:
+For example, if you wanted to find get all rows from the `pokemons` table, in `SQL` you would write:
 
 ```
 SELECT
@@ -40,6 +46,27 @@ FROM
 However in RubySequel you can just do this:
 
 `Pokemon.all`
+
+and it will return:
+
+<!-- => [#<Pokemon:0x007fdb720b3858 @attributes={:id=>1, :name=>"Pikachu", :trainer_id=>1}>,
+ #<Pokemon:0x007fdb720b31a0 @attributes={:id=>2, :name=>"Squirtle", :trainer_id=>1}>,
+ #<Pokemon:0x007fdb720b2c78 @attributes={:id=>3, :name=>"Bulbasaur", :trainer_id=>1}>,
+ #<Pokemon:0x007fdb720b28e0 @attributes={:id=>4, :name=>"Charmander", :trainer_id=>1}>,
+ #<Pokemon:0x007fdb720b2480 @attributes={:id=>5, :name=>"Onix", :trainer_id=>2}>,
+ #<Pokemon:0x007fdb720b2020 @attributes={:id=>6, :name=>"Geodude", :trainer_id=>2}>,
+ #<Pokemon:0x007fdb720b1bc0 @attributes={:id=>7, :name=>"Staryu", :trainer_id=>3}>,
+ #<Pokemon:0x007fdb720b1620 @attributes={:id=>8, :name=>"Starmie", :trainer_id=>3}>,
+ #<Pokemon:0x007fdb720b0ef0 @attributes={:id=>9, :name=>"Psyduck", :trainer_id=>3}>,
+ #<Pokemon:0x007fdb720b0928 @attributes={:id=>10, :name=>"Mew", :trainer_id=>nil}>] -->
+
+In this demo, there are three tables for you to interact with:
+* `Pokemon`
+* `Trainer`
+* `Town`
+
+You can use `::all`, `::find(id)`, `::where(params)` and `::insert` on each of these tables.  
+For each individual row you can use `#update` or you can add to a Table by using `#save`.
 
 ## Custom Databse
 
