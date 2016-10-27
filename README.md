@@ -49,6 +49,7 @@ However in RubySequel you can just do this:
 
 and it will return:
 
+```
 => [#<Pokemon:0x007fdb720b3858 @attributes={:id=>1, :name=>"Pikachu", :trainer_id=>1}>,
  #<Pokemon:0x007fdb720b31a0 @attributes={:id=>2, :name=>"Squirtle", :trainer_id=>1}>,
  #<Pokemon:0x007fdb720b2c78 @attributes={:id=>3, :name=>"Bulbasaur", :trainer_id=>1}>,
@@ -59,6 +60,7 @@ and it will return:
  #<Pokemon:0x007fdb720b1620 @attributes={:id=>8, :name=>"Starmie", :trainer_id=>3}>,
  #<Pokemon:0x007fdb720b0ef0 @attributes={:id=>9, :name=>"Psyduck", :trainer_id=>3}>,
  #<Pokemon:0x007fdb720b0928 @attributes={:id=>10, :name=>"Mew", :trainer_id=>nil}>]
+ ```
 
 In this demo, there are three tables for you to interact with:
 * `Pokemon`
