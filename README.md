@@ -36,7 +36,7 @@ To test the methods or associations, simply use one of the listed methods or ass
 
 For example, if you wanted to find get all rows from the `pokemons` table, in `SQL` you would write:
 
-```
+```SQL
 SELECT
   *
 FROM
@@ -45,7 +45,9 @@ FROM
 
 However in RubySequel you can just do this:
 
-`Pokemon.all`
+```ruby
+Pokemon.all
+```
 
 and it will return:
 
@@ -70,7 +72,7 @@ In this demo, there are three tables for you to interact with:
 You can use `::all`, `::find(id)`, `::where(params)` and `::insert` on each of these tables.  
 For each individual row you can use `#update` or you can add to a Table by using `#save`.
 
-## Custom Databse
+## Custom Database
 
 To load a custom database, change the `DEMO_DB_FILE` to match your `.db` file and `DEMO_SQL_FILE` to your `.sql` file in `demo.rb`.  
 
