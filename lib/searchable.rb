@@ -14,6 +14,6 @@ module Searchable
       #{where_line}
     SQL
 
-    results
+    parse_all(results)
   end
 end
