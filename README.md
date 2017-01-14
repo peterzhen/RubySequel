@@ -1,5 +1,5 @@
 # RubySequel
-RubySequel is a lightweight ORM library.  RubySequel performs SQLite3 with methods through Object Oriented objects by translating SQL queries.  This provides for a quicker, more simplified way for the database to be accessed.
+RubySequel is a lightweight ORM library.  RubySequel connects models to tables in the database.  It simplifies queries by eliminating the need to write raw SQL statements.  This gives a quicker, more simplified way for the database to be accessed.
 
 ##Libraries
 
