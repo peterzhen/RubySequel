@@ -1,13 +1,13 @@
 # RubySequel
 RubySequel is a lightweight ORM library.  RubySequel connects models to tables in the database.  It simplifies queries by eliminating the need to write raw SQL statements.  This gives a quicker, more simplified way for the database to be accessed.
 
-##Libraries
+## Libraries
 
 RubySequel uses:
 * SQLite3
 * ActiveSupport::Inflector
 
-##Methods
+## Methods
 
 * `::all` - returns all rows from the SQLObject.
 * `::find(id)` - returns the rows from the SQLObject that matches the `id` parameter
